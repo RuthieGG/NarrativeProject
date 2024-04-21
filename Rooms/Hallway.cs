@@ -33,6 +33,8 @@ go back to your [bedroom]. Far to your left, you see the [kitchen].
                     Game.Transition<Bedroom>();
                     break;
                 case "kitchen":
+                    Console.WriteLine("You proceed to go to the kitchen.");
+                    Game.Transition<Kitchen>();
                     break;
                 default:
                     Console.WriteLine("Invalid command.");
@@ -47,8 +49,8 @@ go back to your [bedroom]. Far to your left, you see the [kitchen].
     "\n1.Listen closely to the whispers.\n" +
     "2.Examine the trees for clues.");
 
-            string secondchoice = Console.ReadLine();
-            switch (secondchoice)
+            string choice = Console.ReadLine();
+            switch (choice)
             {
                 case "1":
                     Console.WriteLine("You lean in closely, and from the painting emerges a faint whisper, " +
