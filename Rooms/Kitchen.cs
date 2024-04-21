@@ -54,26 +54,44 @@ with cobwebs on the falling ceiling.
         }
         private void ArrangeUtensils()
         {
-            Console.WriteLine("You inspect the utensils and carefully arrange them in alphabetical order.");
-            if (CorrectedUtensils())
+        tryAgain: Console.WriteLine("You inspect the utensils and carefully arrange them in alphabetical order.");
+
+            try
             {
-                Console.WriteLine("You hear a click from the cupboard!");
-                Console.WriteLine("It is now unlocked. You find a mysterious key.");
+                Console.WriteLine("Enter the utensils in alphabetical order. (spoon, knife, glass)");
+                string input = Console.ReadLine();
+
+                if (CorrectedUtensils(input))
+                {
+                    Console.WriteLine("You hear a click from the cupboard!");
+                    Console.WriteLine("It is now unlocked. You find a mysterious key.");
+                    return;
+                }
+                else
+                {
+                    Console.WriteLine("You arrange the utensils...");
+                    Console.WriteLine("The knife comes alive and cuts you!");
+                    Console.WriteLine("Maybe you didn't do it right...be careful.");
+                }
             }
-            else
+            catch (Exception e)
             {
-                Console.WriteLine("You arrange the utensils");
+                Console.WriteLine($"An error has occured: {e.Message}");
+                Console.WriteLine("Please try again!");
             }
+            goto tryAgain;
         }
-        private bool CorrectedUtensils()
+        private bool CorrectedUtensils(string input)
         {
             string[] correctOrder = { "glass", "knife", "spoon" };
-            Console.WriteLine("Enter the utensils in alphabetical order.");
-            string input = Console.ReadLine();
             string[] arrangedUtensils = input.ToLower().Split(',');
-            for (int i = 0; i<correctOrder.Length; i++)
+
+            if (arrangedUtensils.Length != correctOrder.Length)
+                return false;
+
+            for (int i = 0; i < correctOrder.Length; i++)
             {
-                if (i >= arrangedUtensils.Length || arrangedUtensils[i].Trim() != correctOrder[i])
+                if ( arrangedUtensils[i].Trim() != correctOrder[i])
                 {
                     return false;
                 }
