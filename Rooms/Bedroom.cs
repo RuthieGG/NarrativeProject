@@ -6,10 +6,10 @@ namespace NarrativeProject.Rooms
     {
 
         internal override string CreateDescription() =>
-@"You are in your bedroom.
-The [door] in front of you leads to your living room.
-Your private [bathroom] is to your left.
-From your closet, you see the [attic].
+@"You wake up on the floor to a strange bedroom. 
+The room only contains a [bed], a [drawer], 
+and a broken [mirror]. There is a [teddy bear] nicely tucked in on the bed. 
+And you see the door in front of you leads to a [hallway]. 
 ";
 
         internal override void ReceiveChoice(string choice)
