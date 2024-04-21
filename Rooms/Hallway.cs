@@ -15,6 +15,7 @@ go back to your [bedroom].
         internal override void ReceiveChoice(string choice)
         {
             switch (choice)
+                
             {
                 case "1":
                     Console.WriteLine("This painting comes to life," +
@@ -26,9 +27,15 @@ go back to your [bedroom].
                 case "3":
                     Console.WriteLine("This painting is called The Whispering Woods. " +
                         "\nThe painting shows a dense forest. And you can hear something coming from the painting…" +
-                        "\r\nWhat to do you want to do?" +
-                        "\r\n1.Listen closely to the whispers.\r\n" +
+                        "\nWhat to do you want to do?" +
+                        "\n1.Listen closely to the whispers.\r\n" +
                         "2.Examine the trees for clues.");
+                    string secondchoice = Console.ReadLine();
+                    switch(secondchoice)
+                    {
+                        case "1":
+                            break;
+                    }
                         break;
                 case "bedroom":
                     Console.WriteLine("You return to your bedroom.");
