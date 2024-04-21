@@ -4,7 +4,7 @@ namespace NarrativeProject.Rooms
 {
     internal class Bedroom : Room
     {
-
+        internal static bool isKeyCollected;
         internal override string CreateDescription() =>
 @"You wake up on the cold floor of a strange bedroom. 
 The room only contains a [bed], a [drawer], 
@@ -21,6 +21,7 @@ And you see the door in front of you that leads to a [hallway].
                         "\nIt's cold to the touch. " +
                         "You feel a chill run down your spine" +
                         " as you pocket the key.");
+                    isKeyCollected = true;
                     break;
 
                 case "mirror":
@@ -28,20 +29,21 @@ And you see the door in front of you that leads to a [hallway].
                         "\n you accidently activate a trap!" +
                         "\nYou are struck by flying glass fragments!");
                     break;
-                case "door":
-                    if (!AtticRoom.isKeyCollected)
+                case "hallway":
+                    if (!isKeyCollected)
                     {
-                        Console.WriteLine("The door is locked.");
+                        Console.WriteLine("The door is locked. You need to find the key!");
                     }
                     else
                     {
                         Console.WriteLine("You open the door with the key and leave your bedroom.");
-                        Game.Finish();
+                        Game.Transition<Hallway>();
+
                     }
                     break;
                 case "teddy bear":
                     Console.WriteLine("A whisper emerges from the eerie teddy bear. " +
-                        "\nIts voice barely audible: 'Look under the bed...'");
+                        "\nIts voice barely audible: Look under the bed...");
                     break;
                 default:
                     Console.WriteLine("Invalid command.");
