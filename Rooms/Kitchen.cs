@@ -54,7 +54,30 @@ with cobwebs on the falling ceiling.
         }
         private void ArrangeUstensils()
         {
+            Console.WriteLine("You inspect the ustensils and carefully arrange them in alphabetical order.");
+            if (CorrectedUstensils())
+            {
 
+            }
+            else
+            {
+                
+            }
+        }
+        private bool CorrectedUstensils()
+        {
+            string[] correctOrder = { "glass", "knife", "spoon" };
+            Console.WriteLine("Enter the ustensils in alphabetical order.");
+            string input = Console.ReadLine();
+            string[] arrangedUstensils = input.ToLower().Split(',');
+            for (int i = 0; i<correctOrder.Length; i++)
+            {
+                if (i >= arrangedUstensils.Length || arrangedUstensils[i].Trim() != correctOrder[i])
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }
