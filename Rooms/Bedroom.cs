@@ -39,9 +39,9 @@ And you see the door in front of you that leads to a [hallway].
                         Game.Finish();
                     }
                     break;
-                case "attic":
-                    Console.WriteLine("You go up and enter your attic.");
-                    Game.Transition<AtticRoom>();
+                case "teddy bear":
+                    Console.WriteLine("A whisper emerges from the eerie teddy bear. " +
+                        "\nIts voice barely audible: 'Look under the bed...'");
                     break;
                 default:
                     Console.WriteLine("Invalid command.");
