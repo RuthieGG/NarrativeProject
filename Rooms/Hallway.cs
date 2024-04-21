@@ -6,9 +6,10 @@ namespace NarrativeProject.Rooms
     internal class Hallway : Room
     {
         internal override string CreateDescription() =>
-@"You find yourself in a creepy hallway with dim lighting. 
+@"You find yourself in a creepy hallway with dim lighting.  
 Sinister paintings line the walls. One pair of eyes in one of the paintings[1] 
-seem to follow your movements. Two are waiting to be observed...[2] and [3].
+seem to follow your movements. Two are waiting to be observed...[2] and [3]. You can 
+go back to your [bedroom].
 ";
 
         internal override void ReceiveChoice(string choice)
@@ -16,10 +17,11 @@ seem to follow your movements. Two are waiting to be observed...[2] and [3].
             switch (choice)
             {
                 case "1":
-                    Console.WriteLine("You relax in the bath.");
+                    Console.WriteLine("This painting comes to life," +
+                        "\nand grabs you by the neck.");
                     break;
                 case "2":
-                    Console.WriteLine("You see the numbers 6969 written on the fog on your mirror.");
+                    Console.WriteLine("This painting ");
                     break;
                 case "3":
                     Console.WriteLine("You return to your bedroom.");
