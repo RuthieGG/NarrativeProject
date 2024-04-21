@@ -13,6 +13,7 @@ namespace NarrativeProject
             game.Add(new Kitchen());
             game.Add(new Hallway());
 
+
             while (!game.IsGameOver())
             {
                 Console.WriteLine("--");

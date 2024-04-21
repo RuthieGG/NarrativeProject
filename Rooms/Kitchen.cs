@@ -56,8 +56,6 @@ with cobwebs on the falling ceiling.
         {
         tryAgain: Console.WriteLine("You inspect the utensils and carefully arrange them in alphabetical order.");
 
-            try
-            {
                 Console.WriteLine("Enter the utensils in alphabetical order. (spoon, knife, glass)");
                 string input = Console.ReadLine();
 
@@ -73,12 +71,7 @@ with cobwebs on the falling ceiling.
                     Console.WriteLine("The knife comes alive and cuts you!");
                     Console.WriteLine("Maybe you didn't do it right...be careful.");
                 }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine($"An error has occured: {e.Message}");
-                Console.WriteLine("Please try again!");
-            }
+ 
             goto tryAgain;
         }
         private bool CorrectedUtensils(string input)
