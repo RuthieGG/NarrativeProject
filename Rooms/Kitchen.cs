@@ -2,14 +2,14 @@
 
 namespace NarrativeProject.Rooms
 {
-    internal class AtticRoom : Room
+    internal class Kitchen : Room
     {
         internal static bool isKeyCollected;
 
         internal override string CreateDescription() =>
-@"In the attic, it's dark and cold.
-A chest is locked with the code [????].
-You can return to your [bedroom].
+@"You step into the [kitchen], feeling the darkness of the [hallway] behind you loom ominously...
+You are greeted by a dusty table and a lonely [cupboard]. The rooms is filled
+with cobwebs on the falling ceiling.
 ";
 
         internal override void ReceiveChoice(string choice)
