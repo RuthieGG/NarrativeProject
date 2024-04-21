@@ -34,6 +34,10 @@ go back to your [bedroom].
                     switch(secondchoice)
                     {
                         case "1":
+                            Console.WriteLine("");
+                            break;
+                        case "2":
+                            Console.WriteLine("");
                             break;
                     }
                         break;
