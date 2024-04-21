@@ -45,6 +45,9 @@ And you see the door in front of you that leads to a [hallway].
                     Console.WriteLine("A whisper emerges from the eerie teddy bear. " +
                         "\nIts voice barely audible: Look under the bed...");
                     break;
+                case "bed":
+                    Console.WriteLine("");
+                    break;
                 default:
                     Console.WriteLine("Invalid command.");
                     break;
