@@ -38,7 +38,7 @@ go back to your [bedroom].
                                 "\nrevealing a mysterious set of numbers: ");
                             break;
                         case "2":
-                            Console.WriteLine("");
+                            Console.WriteLine("You examine the trees but find nothing of interest.");
                             break;
                     }
                         break;
