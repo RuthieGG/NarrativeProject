@@ -26,7 +26,7 @@ And you see the door in front of you that leads to a [hallway].
 
                 case "mirror":
                     Console.WriteLine("As you approach the broken mirror," +
-                        "\n you accidently activate a trap!" +
+                        "\nyou accidently activated a trap!" +
                         "\nYou are struck by flying glass fragments!");
                     break;
                 case "hallway":
@@ -36,17 +36,20 @@ And you see the door in front of you that leads to a [hallway].
                     }
                     else
                     {
-                        Console.WriteLine("You open the door with the key and leave your bedroom.");
+                        Console.WriteLine("You open the door and it leads you to " +
+                            "\na dark creepy hallway...");
                         Game.Transition<Hallway>();
-
+                       
                     }
                     break;
+                   
                 case "teddy bear":
-                    Console.WriteLine("A whisper emerges from the eerie teddy bear. " +
-                        "\nIts voice barely audible: Look under the bed...");
+                    Console.WriteLine("A voice emerges from the eerie teddy bear. " +
+                        "\nIts high pitch voice says: Look under the bed...");
                     break;
                 case "bed":
-                    Console.WriteLine("");
+                    Console.WriteLine("You lift the bedsheet, reveals a pair of ominous eyes." +
+                        "\nYou quickly lower the sheet.");
                     break;
                 default:
                     Console.WriteLine("Invalid command.");
