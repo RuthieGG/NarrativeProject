@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace NarrativeProject.Rooms
 {
-    internal class Hallway:Room
+    internal class Hallway : Room
     {
         internal override string CreateDescription() =>
 @"In your bathroom, the [bath] is filled with hot water.
