@@ -16,6 +16,12 @@ And you see the door in front of you leads to a [hallway].
         {
             switch (choice)
             {
+                case "drawer":
+                    Console.WriteLine("You open the drawer, revealing a rusty key." +
+                        "its cold to the touch. You feel a chill run down your spine as you" +
+                        "pocket the key.");
+                    break;
+
                 case "bathroom":
                     Console.WriteLine("You enter the bathroom.");
                     Game.Transition<Bathroom>();
