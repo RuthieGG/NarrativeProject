@@ -24,6 +24,13 @@ go back to your [bedroom].
                     Console.WriteLine("This painting ");
                     break;
                 case "3":
+                    Console.WriteLine("This painting is called The Whispering Woods. " +
+                        "\nThe painting shows a dense forest. And you can hear something coming from the painting…" +
+                        "\r\nWhat to do you want to do?" +
+                        "\r\n1.Listen closely to the whispers.\r\n" +
+                        "2.Examine the trees for clues.");
+                        break;
+                case "bedroom":
                     Console.WriteLine("You return to your bedroom.");
                     Game.Transition<Bedroom>();
                     break;
