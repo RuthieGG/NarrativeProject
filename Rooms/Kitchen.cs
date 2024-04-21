@@ -42,7 +42,7 @@ with cobwebs on the falling ceiling.
             switch(choice)
             {
                 case "1":
-                    ArrangeUstensils();
+                    ArrangeUtensils();
                     break;
                 case "2":
                     Console.WriteLine("You decide to do nothing.");
@@ -52,27 +52,28 @@ with cobwebs on the falling ceiling.
                     break;
             }
         }
-        private void ArrangeUstensils()
+        private void ArrangeUtensils()
         {
-            Console.WriteLine("You inspect the ustensils and carefully arrange them in alphabetical order.");
-            if (CorrectedUstensils())
+            Console.WriteLine("You inspect the utensils and carefully arrange them in alphabetical order.");
+            if (CorrectedUtensils())
             {
-
+                Console.WriteLine("You hear a click from the cupboard!");
+                Console.WriteLine("It is now unlocked. You find a mysterious key.");
             }
             else
             {
-                
+                Console.WriteLine("You arrange the utensils");
             }
         }
-        private bool CorrectedUstensils()
+        private bool CorrectedUtensils()
         {
             string[] correctOrder = { "glass", "knife", "spoon" };
-            Console.WriteLine("Enter the ustensils in alphabetical order.");
+            Console.WriteLine("Enter the utensils in alphabetical order.");
             string input = Console.ReadLine();
-            string[] arrangedUstensils = input.ToLower().Split(',');
+            string[] arrangedUtensils = input.ToLower().Split(',');
             for (int i = 0; i<correctOrder.Length; i++)
             {
-                if (i >= arrangedUstensils.Length || arrangedUstensils[i].Trim() != correctOrder[i])
+                if (i >= arrangedUtensils.Length || arrangedUtensils[i].Trim() != correctOrder[i])
                 {
                     return false;
                 }
