@@ -34,7 +34,8 @@ go back to your [bedroom].
                     switch(secondchoice)
                     {
                         case "1":
-                            Console.WriteLine("");
+                            Console.WriteLine("You lean in closely, and from the painting emerges a faint whisper, " +
+                                "\nrevealing a mysterious set of numbers: ");
                             break;
                         case "2":
                             Console.WriteLine("");
