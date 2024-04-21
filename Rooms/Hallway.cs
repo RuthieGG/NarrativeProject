@@ -15,13 +15,13 @@ seem to follow your movements. Two are waiting to be observed...[2] and [3].
         {
             switch (choice)
             {
-                case "bath":
+                case "1":
                     Console.WriteLine("You relax in the bath.");
                     break;
-                case "mirror":
+                case "2":
                     Console.WriteLine("You see the numbers 6969 written on the fog on your mirror.");
                     break;
-                case "bedroom":
+                case "3":
                     Console.WriteLine("You return to your bedroom.");
                     Game.Transition<Bedroom>();
                     break;
