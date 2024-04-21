@@ -9,7 +9,7 @@ namespace NarrativeProject.Rooms
 @"You find yourself in a creepy hallway with dim lighting.  
 Sinister paintings line the walls. One pair of eyes in one of the paintings[1] 
 seem to follow your movements. Two are waiting to be observed...[2] and [3]. You can 
-go back to your [bedroom].
+go back to your [bedroom]. Far to your left, you see the [kitchen]. 
 ";
 
         internal override void ReceiveChoice(string choice)
