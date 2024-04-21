@@ -9,8 +9,8 @@ namespace NarrativeProject
         {
             var game = new Game();
             game.Add(new Bedroom());
-            game.Add(new Bathroom());
-            game.Add(new AtticRoom());
+            game.Add(new Basement());
+            game.Add(new Kitchen());
             game.Add(new Hallway());
 
             while (!game.IsGameOver())
