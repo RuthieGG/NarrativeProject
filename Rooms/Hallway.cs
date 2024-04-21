@@ -6,9 +6,9 @@ namespace NarrativeProject.Rooms
     internal class Hallway : Room
     {
         internal override string CreateDescription() =>
-@"In your bathroom, the [bath] is filled with hot water.
-The [mirror] in front of you reflects your depressed face.
-You can return to your [bedroom].
+@"You find yourself in a creepy hallway with dim lighting. 
+Sinister paintings line the walls. One pair of eyes in one of the paintings[1] 
+seem to follow your movements. Two are waiting to be observed...[2] and [3].
 ";
 
         internal override void ReceiveChoice(string choice)
