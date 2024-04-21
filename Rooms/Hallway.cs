@@ -17,6 +17,7 @@ go back to your [bedroom]. Far to your left, you see the [kitchen].
             switch (choice)
                 
             {
+                
                 case "1":
                     Console.WriteLine("This painting comes to life," +
                         "\nand grabs you by the neck.");
@@ -24,30 +25,37 @@ go back to your [bedroom]. Far to your left, you see the [kitchen].
                 case "2":
                     Console.WriteLine("This painting ");
                     break;
-                case "3":
-                    Console.WriteLine("This painting is called The Whispering Woods. " +
-                        "\nThe painting shows a dense forest. And you can hear something coming from the painting…" +
-                        "\nWhat to do you want to do?" +
-                        "\n1.Listen closely to the whispers.\r\n" +
-                        "2.Examine the trees for clues.");
-                    string secondchoice = Console.ReadLine();
-                    switch(secondchoice)
-                    {
-                        case "1":
-                            Console.WriteLine("You lean in closely, and from the painting emerges a faint whisper, " +
-                                "\nrevealing a mysterious set of numbers: ");
-                            break;
-                        case "2":
-                            Console.WriteLine("You examine the trees but find nothing of interest.");
-                            break;
-                    }
-                        break;
+                case "3": ThirdPainting();
+                    break;
+
                 case "bedroom":
                     Console.WriteLine("You return to your bedroom.");
                     Game.Transition<Bedroom>();
                     break;
+                case "kitchen":
+                    break;
                 default:
                     Console.WriteLine("Invalid command.");
+                    break;
+            }
+        }
+        private void ThirdPainting()
+        {
+            Console.WriteLine("This painting is called The Whispering Woods. " +
+    "\nThe painting shows a dense forest. And you can hear something coming from the painting…" +
+    "\nWhat to do you want to do?" +
+    "\n1.Listen closely to the whispers.\n" +
+    "2.Examine the trees for clues.");
+
+            string secondchoice = Console.ReadLine();
+            switch (secondchoice)
+            {
+                case "1":
+                    Console.WriteLine("You lean in closely, and from the painting emerges a faint whisper, " +
+                        "\nrevealing a mysterious set of numbers: ");
+                    break;
+                case "2":
+                    Console.WriteLine("You examine the trees but find nothing of interest.");
                     break;
             }
         }
