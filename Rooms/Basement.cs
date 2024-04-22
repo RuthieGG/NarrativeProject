@@ -26,7 +26,7 @@ But you notice a padlock...
                     break;
                 case "":
                     Console.WriteLine("");
-                    Game.Transition<Bedroom>();
+                   
                     break;
                 default:
                     Console.WriteLine("");
