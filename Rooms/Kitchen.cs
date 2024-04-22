@@ -4,7 +4,7 @@ namespace NarrativeProject.Rooms
 {
     internal class Kitchen : Room
     {
-        
+        internal static bool iskeyCollected;
 
         internal override string CreateDescription() =>
 @"You step into the kitchen, feeling the darkness of the [hallway] behind you loom ominously...
@@ -24,7 +24,15 @@ with cobwebs on the falling ceiling. You see a door on the floor that leads to a
                     InspectCupboard();
                     break;
                 case "basement":
-                    Console.WriteLine("You tried to lift the door open, but it's locked.");
+                    if (!isKeyCollected)
+                    {
+                        Console.WriteLine("You tried to lift the door open but it's locked...");
+                    }
+                    else
+                    {
+                        Console.WriteLine("");
+                        Game.Transition<Basement>();
+                    }
                     break;
                 default:
                     Console.WriteLine("Invalid command.");
