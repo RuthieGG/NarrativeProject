@@ -9,7 +9,7 @@ namespace NarrativeProject.Rooms
         internal override string CreateDescription() =>
 @"You step into the kitchen, feeling the darkness of the [hallway] behind you loom ominously...
 You are greeted by a dusty table and a lonely [cupboard]. The rooms is filled
-with cobwebs on the falling ceiling.
+with cobwebs on the falling ceiling. You see a door on the floor that leads to a [basement]...
 ";
 
         internal override void ReceiveChoice(string choice)
@@ -23,6 +23,9 @@ with cobwebs on the falling ceiling.
                 case "cupboard":
                     InspectCupboard();
                     break;
+                case "basement":
+                    Console.WriteLine("");
+                    break;
                 default:
                     Console.WriteLine("Invalid command.");
                     break;
@@ -35,7 +38,7 @@ with cobwebs on the falling ceiling.
             Console.WriteLine("\n\"To see what's inside, arrange the utensils on the table" +
                 "\nin alphabetical order.\"");
             Console.WriteLine("What do you want to do? ");
-            Console.WriteLine("1. Attempt arranging the ustensils.");
+            Console.WriteLine("1. Attempt arranging the utensils.");
             Console.WriteLine("2. Do nothing.");
             string choice = Console.ReadLine(); 
 
