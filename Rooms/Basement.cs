@@ -15,18 +15,18 @@ Beyond lies the promise of escape, the sunny windy air whispering of freedom!
         {
             switch (choice)
             {
-                case "bath":
-                    Console.WriteLine("You relax in the bath.");
+                case "":
+                    Console.WriteLine("");
                     break;
-                case "mirror":
-                    Console.WriteLine("You see the numbers 6969 written on the fog on your mirror.");
+                case "":
+                    Console.WriteLine("");
                     break;
                 case "bedroom":
-                    Console.WriteLine("You return to your bedroom.");
+                    Console.WriteLine("");
                     Game.Transition<Bedroom>();
                     break;
                 default:
-                    Console.WriteLine("Invalid command.");
+                    Console.WriteLine("");
                     break;
             }
         }
