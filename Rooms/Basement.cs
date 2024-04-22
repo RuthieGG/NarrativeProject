@@ -4,7 +4,6 @@ namespace NarrativeProject.Rooms
 {
     internal class Basement : Room
     {
-
         internal override string CreateDescription() =>
 @"In your bathroom, the [bath] is filled with hot water.
 The [mirror] in front of you reflects your depressed face.
