@@ -12,7 +12,7 @@ namespace NarrativeProject
             game.Add(new Basement());
             game.Add(new Kitchen());
             game.Add(new Hallway());
-            game.Add(new EscapeRoom());
+            game.Add(new LastRoom());
 
             while (!game.IsGameOver())
             {
