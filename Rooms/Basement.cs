@@ -7,7 +7,7 @@ namespace NarrativeProject.Rooms
         internal override string CreateDescription() =>
 @"Descending into the basement, 
 the air grows colder, and the sound of dripping water echoes off the stone walls.
-A door ahead catches your eyes. It outlines faintly some light.
+A [door] ahead catches your eyes. It outlines faintly some light.
 Beyond lies the promise of escape, the sunny windy air whispering of freedom!
 ";
 
@@ -15,7 +15,7 @@ Beyond lies the promise of escape, the sunny windy air whispering of freedom!
         {
             switch (choice)
             {
-                case "":
+                case "door":
                     Console.WriteLine("");
                     break;
                 case "":
