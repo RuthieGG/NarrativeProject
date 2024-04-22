@@ -26,11 +26,11 @@ with cobwebs on the falling ceiling. You see a door on the floor that leads to a
                 case "basement":
                     if (!isKeyCollected)
                     {
-                        Console.WriteLine("You tried to lift the door open but it's locked...");
+                        Console.WriteLine("The door is locked. Perhaps there's a key somewhere...");
                     }
                     else
                     {
-                        Console.WriteLine("The door is locked. Perhaps there's a key somewhere...");
+                        Console.WriteLine("You unlock the door and descend to the dark basement.");
                         Game.Transition<Basement>();
                     }
                     break;
