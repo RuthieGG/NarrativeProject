@@ -4,7 +4,7 @@ namespace NarrativeProject.Rooms
 {
     internal class Kitchen : Room
     {
-        internal static bool iskeyCollected;
+        internal static bool isKeyCollected;
 
         internal override string CreateDescription() =>
 @"You step into the kitchen, feeling the darkness of the [hallway] behind you loom ominously...
@@ -74,7 +74,7 @@ with cobwebs on the falling ceiling. You see a door on the floor that leads to a
                 {
                     Console.WriteLine("You hear a click from the cupboard!");
                     Console.WriteLine("It is now unlocked. You find a mysterious key.");
-                iskeyCollected = true;
+                isKeyCollected = true;
                     return;
                 }
                 else

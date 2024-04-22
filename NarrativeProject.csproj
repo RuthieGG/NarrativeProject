@@ -51,6 +51,7 @@
     <Compile Include="Rooms\Basement.cs" />
     <Compile Include="Rooms\Bedroom.cs" />
     <Compile Include="Rooms\Hallway.cs" />
+    <Compile Include="Rooms\LastRoom.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
