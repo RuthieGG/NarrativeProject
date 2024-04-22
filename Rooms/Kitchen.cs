@@ -24,7 +24,7 @@ with cobwebs on the falling ceiling. You see a door on the floor that leads to a
                     InspectCupboard();
                     break;
                 case "basement":
-                    Console.WriteLine("");
+                    Console.WriteLine("You tried to lift the door open, but it's locked.");
                     break;
                 default:
                     Console.WriteLine("Invalid command.");
