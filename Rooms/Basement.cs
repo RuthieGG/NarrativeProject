@@ -5,10 +5,10 @@ namespace NarrativeProject.Rooms
     internal class Basement : Room
     {
         internal override string CreateDescription() =>
-@"Descending into the basement, 
-the air grows colder, and the sound of dripping water echoes off the stone walls.
+@"Descending into the basement...
 A [door] ahead catches your eyes. It outlines faintly some light.
 Beyond lies the promise of escape, the sunny windy air whispering of freedom!
+
 ";
 
         internal override void ReceiveChoice(string choice)
@@ -18,10 +18,11 @@ Beyond lies the promise of escape, the sunny windy air whispering of freedom!
                 case "door":
                     Console.WriteLine("");
                     break;
-                case "":
-                    Console.WriteLine("");
+                case "kitchen":
+                    Console.WriteLine("You go upstairs...");
+                    Game.Transition<Kitchen>();
                     break;
-                case "bedroom":
+                case "":
                     Console.WriteLine("");
                     Game.Transition<Bedroom>();
                     break;
