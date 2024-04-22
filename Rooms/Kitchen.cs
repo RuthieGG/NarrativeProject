@@ -30,7 +30,7 @@ with cobwebs on the falling ceiling. You see a door on the floor that leads to a
                     }
                     else
                     {
-                        Console.WriteLine("");
+                        Console.WriteLine("The door is locked. Perhaps there's a key somewhere...");
                         Game.Transition<Basement>();
                     }
                     break;
@@ -74,6 +74,7 @@ with cobwebs on the falling ceiling. You see a door on the floor that leads to a
                 {
                     Console.WriteLine("You hear a click from the cupboard!");
                     Console.WriteLine("It is now unlocked. You find a mysterious key.");
+                iskeyCollected = true;
                     return;
                 }
                 else
