@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.SqlServer.Server;
 
 
 namespace NarrativeProject.Rooms
@@ -15,6 +16,9 @@ go back to your [bedroom]. Far to your left, you see the [kitchen].
 
         internal override void ReceiveChoice(string choice)
         {
+            Console.WriteLine("--");
+          
+
             switch (choice)
                 
             {
