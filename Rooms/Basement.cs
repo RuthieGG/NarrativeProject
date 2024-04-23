@@ -8,7 +8,7 @@ namespace NarrativeProject.Rooms
 @"Descending into the basement...
 A [door] ahead catches your eyes. It outlines faintly some light.
 Beyond lies the promise of escape, the sunny windy air whispering of freedom! 
-But you notice a padlock...
+But you notice a padlock...You can walk up the stairs to the [kitchen].
 ";
 
         internal override void ReceiveChoice(string choice)
