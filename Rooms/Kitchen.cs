@@ -45,7 +45,7 @@ with cobwebs on the falling ceiling. You see a door on the floor that leads to a
 
             Console.WriteLine("\n\"To see what's inside, arrange the utensils on the table" +
                 "\nin alphabetical order.\"");
-            Console.WriteLine("What do you want to do? ");
+            Console.WriteLine("\nWhat do you want to do? ");
             Console.WriteLine("1. Attempt arranging the utensils.");
             Console.WriteLine("2. Do nothing.");
             string choice = Console.ReadLine(); 
