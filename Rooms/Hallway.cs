@@ -5,7 +5,7 @@ namespace NarrativeProject.Rooms
 {
     internal class Hallway : Room
     {
-        private static string combinationCode;
+        public static string combinationCode;
         internal override string CreateDescription() =>
 @"You find yourself in a creepy hallway with dim lighting.  
 Sinister paintings line the walls. One pair of eyes in one of the paintings[1] 
