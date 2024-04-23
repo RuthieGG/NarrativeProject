@@ -20,10 +20,11 @@ go back to your [bedroom]. Far to your left, you see the [kitchen].
                 
                 case "1":
                     Console.WriteLine("This painting comes to life," +
-                        "\nand grabs you by the neck.");
+                        "\nand grabs you by the neck!");
                     break;
                 case "2":
-                    Console.WriteLine("This painting ");
+                    Console.WriteLine("This painting is an exact replica of yourself." +
+                        "\ncopying every movement you make...creepy. ");
                     break;
                 case "3": ThirdPainting();
                     break;
