@@ -16,17 +16,21 @@ But you notice a padlock...You can walk up the stairs to the [kitchen].
             switch (choice)
             {
                 case "door":
-                    Console.WriteLine("You see that there is a combination lock...");
-                    Console.WriteLine("You need to put 4 numbers.");
-                    Console.WriteLine("");
+                    if
+                    {
+                        Console.WriteLine("You see that there is a combination lock...");
+                        Console.WriteLine("You need to put the 4 digit numbers.");
+                    }
+
+                    else
+                    { 
+                        Console.WriteLine("");
+                        Game.Transition<LastRoom>();
+                    }
                     break;
                 case "kitchen":
                     Console.WriteLine("You go back upstairs...");
                     Game.Transition<Kitchen>();
-                    break;
-                case "":
-                    Console.WriteLine("");
-                   
                     break;
                 default:
                     Console.WriteLine("");
