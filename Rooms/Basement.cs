@@ -21,7 +21,7 @@ But you notice a padlock...You can walk up the stairs to the [kitchen].
                     Console.WriteLine("");
                     break;
                 case "kitchen":
-                    Console.WriteLine("You go upstairs...");
+                    Console.WriteLine("You go back upstairs...");
                     Game.Transition<Kitchen>();
                     break;
                 case "":
