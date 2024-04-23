@@ -16,23 +16,33 @@ But you notice a padlock...You can walk up the stairs to the [kitchen].
             switch (choice)
             {
                 case "door":
-                    //if
-                    //{
-                    //    Console.WriteLine("You see that there is a combination lock...");
-                    //    Console.WriteLine("You need to put the 4 digit numbers.");
-                    //}
-                    //else
-                    //{ 
-                    //    Console.WriteLine("The combination ");
-                    //    Game.Transition<LastRoom>();
-                    //}
+                    if(string.IsNullOrEmpty(Hallway.combinationCode))
+                    {
+                        Console.WriteLine("The door is locked. Perhaps you need to find a code...");
+                    }
+                    else
+                    {
+                        Console.WriteLine("You see that it requires a combination lock...");
+                        Console.WriteLine($"It requires a 4 digit combination code: {Hallway.combinationCode}");
+                        string rightCode = Console.ReadLine();
+
+                        if(rightCode == Hallway.combinationCode)
+                        {
+                            Console.WriteLine("The lock clicks open...freedom is yours!");
+                            Game.Transition<LastRoom>();
+                        }
+                        else
+                        {
+                            Console.WriteLine("You get electrocuted! The door to escape remains locked...");
+                        }
+                    }
                     break;
                 case "kitchen":
                     Console.WriteLine("You go back upstairs...");
                     Game.Transition<Kitchen>();
                     break;
                 default:
-                    Console.WriteLine("");
+                    Console.WriteLine("Invalid command.");
                     break;
             }
         }
