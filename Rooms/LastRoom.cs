@@ -9,9 +9,14 @@ namespace NarrativeProject.Rooms
     internal class LastRoom : Room
     {
         internal override string CreateDescription() =>
-           @"";
+           @"You open the door, expecting to be greeted by freedom.
+Instead, your find yourself ";
             internal override  void ReceiveChoice(string choice)
         {
+            switch(choice)
+            {
+
+            }
 
         }
     }
