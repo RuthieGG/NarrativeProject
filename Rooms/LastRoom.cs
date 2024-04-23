@@ -10,7 +10,7 @@ namespace NarrativeProject.Rooms
     {
         internal override string CreateDescription() =>
            @"You open the door, expecting to be greeted by freedom.
-Instead, your find yourself ";
+Instead, your find yourself in a  ";
             internal override  void ReceiveChoice(string choice)
         {
             switch(choice)
