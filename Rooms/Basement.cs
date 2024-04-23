@@ -23,7 +23,7 @@ But you notice a padlock...You can walk up the stairs to the [kitchen].
                     else
                     {
                         Console.WriteLine("You see that it requires a combination lock...");
-                        Console.WriteLine($"It requires a 4 digit combination code: {Hallway.combinationCode}");
+                        Console.WriteLine($"It requires a 4 digit combination code: ");
                         string rightCode = Console.ReadLine();
 
                         if(rightCode == Hallway.combinationCode)
