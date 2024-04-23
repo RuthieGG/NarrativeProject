@@ -5,6 +5,7 @@ namespace NarrativeProject.Rooms
 {
     internal class Hallway : Room
     {
+        private static string combinationCode;
         internal override string CreateDescription() =>
 @"You find yourself in a creepy hallway with dim lighting.  
 Sinister paintings line the walls. One pair of eyes in one of the paintings[1] 
@@ -54,13 +55,22 @@ go back to your [bedroom]. Far to your left, you see the [kitchen].
             switch (choice)
             {
                 case "1":
-                    Console.WriteLine("You lean in closely, and from the painting emerges a faint whisper, " +
-                        "\nrevealing a mysterious set of numbers: ");
+                    RandomCode();
+                    Console.WriteLine($"You lean in closely, and from the painting emerges a faint whisper, " +
+                        $"\nrevealing a mysterious set of numbers: {combinationCode}");
                     break;
                 case "2":
                     Console.WriteLine("You examine the trees but find nothing of interest.");
                     break;
+                default:
+                    Console.WriteLine("Invalid command.");
+                    break;
             }
+        }
+        private void RandomCode()
+        {
+            Random random = new Random();
+            combinationCode = random.Next(1000,10000).ToString();
         }
     }
 }
