@@ -24,6 +24,7 @@ And you see the door in front of you that leads to a [hallway].
                         "You feel a chill run down your spine" +
                         " as you pocket the key.");
                     isKeyCollected = true;
+                    Game.AddInventory("Key");
                     break;
 
                 case "mirror":
@@ -51,6 +52,7 @@ And you see the door in front of you that leads to a [hallway].
                         Console.WriteLine("You pick up the eerie teddy bear. It talks?");
                         Console.WriteLine("\nI will heal you and keep you safe!");
                         isTeddyBearCollected = true;
+                        Game.AddInventory("Teddy Bear");
                     }
                     else
                     {

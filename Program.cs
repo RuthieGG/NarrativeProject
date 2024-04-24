@@ -16,11 +16,22 @@ namespace NarrativeProject
 
             while (!game.IsGameOver())
             {
-                Console.WriteLine("--");
+                Console.WriteLine("--Inventory (press i)--");
+                Console.WriteLine("\n");
+
                 Console.WriteLine(game.CurrentRoomDescription);
+                
+
                 string choice = Console.ReadLine().ToLower() ?? "";
-                Console.Clear();
-                game.ReceiveChoice(choice);
+                if (choice == "inventory" || choice == "i")
+                {
+                    game.DisplayInventory();
+                }
+                else
+                {
+                    Console.Clear();
+                    game.ReceiveChoice(choice);
+                }
             }
 
             Console.WriteLine("END");
