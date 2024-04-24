@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Diagnostics.Eventing.Reader;
 
 namespace NarrativeProject.Rooms
 {
     internal class Bedroom : Room
     {
         internal static bool isKeyCollected;
+        internal static bool isTeddyBearCollected = false;
         internal override string CreateDescription() =>
 @"You wake up on the cold floor of a strange bedroom. 
 The room only contains a [bed], a [drawer], 
@@ -44,8 +46,16 @@ And you see the door in front of you that leads to a [hallway].
                     break;
                    
                 case "teddy bear":
-                    Console.WriteLine("A voice emerges from the eerie teddy bear. " +
-                        "\nIts high pitch voice says: Look under the bed...");
+                    if (!isTeddyBearCollected)
+                    {
+                        Console.WriteLine("You pick up the eerie teddy bear. It talks?");
+                        Console.WriteLine("\nI will heal you and keep you safe!");
+                        isTeddyBearCollected = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("The teddy bear is already in your inventory...");
+                    }
                     break;
                 case "bed":
                     Console.WriteLine("You lift the bedsheet, reveals a pair of ominous eyes." +
