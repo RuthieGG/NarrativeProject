@@ -12,7 +12,8 @@ namespace NarrativeProject.Rooms
            @"You open the door, expecting to be greeted by freedom.
 Instead, your find yourself in a strange chamber. The illusion of
 the outside suddenly fades...
-At the center of the room, there is a pedestal. Its missing a piece.
+At the center of the room, there is a pedestal. On it, there is a 
+teddy bear logo.
 It seems like something needs to be placed to finally escape...";
             internal override  void ReceiveChoice(string choice)
         {
