@@ -28,6 +28,12 @@ namespace NarrativeProject
         {
             currentRoom.ReceiveChoice(choice);
             CheckTransition();
+            if (playerHealth <= 0)
+            {
+                Console.WriteLine("\nGame over! You died...");
+                isFinished = true;
+                return;
+            }
         }
 
         internal static void Transition<T>() where T : Room
@@ -99,7 +105,7 @@ namespace NarrativeProject
                     Console.WriteLine("The teddy bear reaches his small arms to give you a hug. " +
                         "\nHis hug magically heals your wounds...");
                     playerHealth += 20;
-                    Console.WriteLine("You feel much better...");
+                    Console.WriteLine("\nYou feel much better...");
                     break;
                 default:
                     Console.WriteLine("You cannot use this right now.");

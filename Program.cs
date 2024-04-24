@@ -34,6 +34,7 @@ namespace NarrativeProject
                     Console.Clear();
                     game.ReceiveChoice(choice);
                 }
+     
             }
 
             Console.WriteLine("END");
