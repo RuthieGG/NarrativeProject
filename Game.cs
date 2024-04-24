@@ -11,6 +11,7 @@ namespace NarrativeProject
         static bool isFinished;
         static string nextRoom = "";
         static List<string> inventory = new List<string>();
+       public static int playerHealth = 100;
 
         internal void Add(Room room)
         {
@@ -54,7 +55,7 @@ namespace NarrativeProject
         internal static void AddInventory(string item)
         {
             inventory.Add(item);
-            Console.WriteLine($"Added {item} to your inventory");
+            Console.WriteLine($"\nAdded {item} to your inventory");
         }
         internal void DisplayInventory()
         {
@@ -69,6 +70,40 @@ namespace NarrativeProject
                 {
                     Console.WriteLine(item);
                 }
+                Console.WriteLine("Which item do you want to use?");
+                string selectedItem = Console.ReadLine();
+                if (selectedItem == "cancel")
+                {
+                    return;
+                }
+                else if (selectedItem == "teddy bear" && inventory.Contains("Teddy Bear"))
+                {
+                    UseItem("Teddy Bear");
+                }
+                else
+                {
+                    Console.WriteLine("Invalid command.");
+                }
+            }
+        }
+        internal void UseItem(string item)
+        {
+            if (!inventory.Contains(item))
+            {
+                Console.WriteLine($"You don't have {item} in your inventory...");
+                return;
+            }
+            switch (item)
+            {
+                case "Teddy Bear":
+                    Console.WriteLine("The teddy bear reaches his small arms to give you a hug. " +
+                        "\nHis hug magically heals your wounds...");
+                    playerHealth += 20;
+                    Console.WriteLine("You feel much better...");
+                    break;
+                default:
+                    Console.WriteLine("You cannot use this right now.");
+                    break;
             }
         }
     }

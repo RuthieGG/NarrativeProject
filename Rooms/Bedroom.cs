@@ -24,13 +24,15 @@ And you see the door in front of you that leads to a [hallway].
                         "You feel a chill run down your spine" +
                         " as you pocket the key.");
                     isKeyCollected = true;
-                    Game.AddInventory("Key");
+                    Game.AddInventory("Key 1");
                     break;
 
                 case "mirror":
                     Console.WriteLine("As you approach the broken mirror," +
                         "\nyou accidently activated a trap!" +
                         "\nYou are struck by flying glass fragments!");
+                    Game.playerHealth -= 20;
+                    Console.WriteLine($"Your health is now {Game.playerHealth}");
                     break;
                 case "hallway":
                     if (!isKeyCollected)

@@ -1,5 +1,6 @@
 ﻿using NarrativeProject.Rooms;
 using System;
+using System.Media;
 
 namespace NarrativeProject
 {
@@ -17,6 +18,7 @@ namespace NarrativeProject
             while (!game.IsGameOver())
             {
                 Console.WriteLine("--Inventory (press i)--");
+                Console.WriteLine($"Player health: {Game.playerHealth}");
                 Console.WriteLine("\n");
 
                 Console.WriteLine(game.CurrentRoomDescription);

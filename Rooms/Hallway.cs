@@ -26,6 +26,8 @@ go back to your [bedroom]. Far to your left, you see the [kitchen].
                 case "1":
                     Console.WriteLine("This painting comes to life," +
                         "\nand grabs you by the neck!");
+                    Game.playerHealth -= 20;
+                    Console.WriteLine($"Your health is now {Game.playerHealth}");
                     break;
                 case "2":
                     Console.WriteLine("This painting is an exact replica of yourself." +
@@ -73,8 +75,12 @@ go back to your [bedroom]. Far to your left, you see the [kitchen].
         }
         private void RandomCode()
         {
-            Random random = new Random();
-            combinationCode = random.Next(1000,10000).ToString();
+            if (combinationCode == null)
+
+            {
+                Random random = new Random();
+                combinationCode = random.Next(1000, 10000).ToString();
+            }
         }
     }
 }

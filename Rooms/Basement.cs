@@ -34,6 +34,8 @@ But you notice a padlock...You can walk up the stairs to the [kitchen].
                         else
                         {
                             Console.WriteLine("You get electrocuted! The door to escape remains locked...");
+                            Game.playerHealth -= 20;
+                            Console.WriteLine($"Your health is now {Game.playerHealth}");
                         }
                     }
                     break;

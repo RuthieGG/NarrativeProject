@@ -75,13 +75,16 @@ with cobwebs on the falling ceiling. You see a door on the floor that leads to a
                     Console.WriteLine("You hear a click from the cupboard!");
                     Console.WriteLine("It is now unlocked. You find a mysterious key.");
                 isKeyCollected = true;
+                Game.AddInventory("Key 2");
                     return;
                 }
                 else
                 {
                     Console.WriteLine("You arrange the utensils...");
                     Console.WriteLine("The knife comes alive and cuts you!");
-                    Console.WriteLine("Maybe you didn't do it right...be careful.");
+                    Game.playerHealth -= 20;
+                    Console.WriteLine($"Your health is now {Game.playerHealth}");
+                    Console.WriteLine("\nMaybe you didn't do it right...be careful.\n");
                 }
  
             goto tryAgain;
