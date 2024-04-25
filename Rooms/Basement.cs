@@ -4,6 +4,7 @@ namespace NarrativeProject.Rooms
 {
     internal class Basement : Room
     {
+        private static bool isLastRoomUnlocked = false;
         internal override string CreateDescription() =>
 @"Descending into the basement...
 A [door] ahead catches your eyes. It outlines faintly some light.
@@ -16,7 +17,12 @@ But you notice a padlock...You can walk up the stairs to the [kitchen].
             switch (choice)
             {
                 case "door":
-                    if(string.IsNullOrEmpty(Hallway.combinationCode))
+                    if(IsLastRoomUnlocked())
+                    {
+                        Console.WriteLine("This door is already unlock, you proceed to the next room.");
+                        Game.Transition<LastRoom>();
+                    }
+                    else if(string.IsNullOrEmpty(Hallway.combinationCode))
                     {
                         Console.WriteLine("The door is locked. Perhaps you need to find a code...");
                     }
@@ -29,6 +35,7 @@ But you notice a padlock...You can walk up the stairs to the [kitchen].
                         if(rightCode == Hallway.combinationCode)
                         {
                             Console.WriteLine("The lock clicks open...freedom is yours!");
+                            isLastRoomUnlocked = true;
                             Game.Transition<LastRoom>();
                         }
                         else
@@ -47,6 +54,10 @@ But you notice a padlock...You can walk up the stairs to the [kitchen].
                     Console.WriteLine("Invalid command.");
                     break;
             }
+        }
+        internal static bool IsLastRoomUnlocked()
+        {
+            return isLastRoomUnlocked;
         }
     }
 }
