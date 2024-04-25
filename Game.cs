@@ -81,10 +81,11 @@ namespace NarrativeProject
                 {
                     Console.WriteLine(item);
                 }
-                Console.WriteLine("Which item do you want to use?");
+                Console.WriteLine("Which item do you want to use? Type cancel to go back.");
                 string selectedItem = Console.ReadLine();
                 if (selectedItem == "cancel")
                 {
+                    Console.Clear();
                     return;
                 }
                 else if (selectedItem == "teddy bear" && inventory.Contains("Teddy Bear"))
@@ -93,7 +94,8 @@ namespace NarrativeProject
                 }
                 else
                 {
-                    Console.WriteLine("Invalid command.");
+                    Console.Clear();
+                    Console.WriteLine("You cannot use this.");
                 }
             }
         }
@@ -107,10 +109,19 @@ namespace NarrativeProject
             switch (item)
             {
                 case "Teddy Bear":
-                    Console.WriteLine("The teddy bear reaches his small arms to give you a hug. " +
-                        "\nHis hug magically heals your wounds...");
-                    playerHealth += 20;
-                    Console.WriteLine("\nYou feel much better...");
+                    Console.Clear();
+                    if (playerHealth < 100)
+                    {
+                        Console.WriteLine("The teddy bear reaches his small arms to give you a hug. " +
+                            "\nHis hug magically heals your wounds...");
+                        playerHealth += 20;
+                        Console.WriteLine("\nYou feel much better...");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Teddy bear says: Your fully healed already!");
+                    }
+            
                     break;
                 default:
                     Console.WriteLine("You cannot use this right now.");

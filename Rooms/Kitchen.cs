@@ -53,9 +53,11 @@ with cobwebs on the falling ceiling. You see a door on the floor that leads to a
             switch(choice)
             {
                 case "1":
+                    Console.Clear();
                     ArrangeUtensils();
                     break;
                 case "2":
+                    Console.Clear();
                     Console.WriteLine("You decide to do nothing.");
                     break;
                 default:
@@ -72,6 +74,7 @@ with cobwebs on the falling ceiling. You see a door on the floor that leads to a
 
                 if (CorrectedUtensils(input))
                 {
+                    Console.Clear();
                     Console.WriteLine("\nYou hear a click from the cupboard!");
                     Console.WriteLine("It is now unlocked. You find a mysterious key.");
                 isKeyCollected = true;
@@ -80,6 +83,7 @@ with cobwebs on the falling ceiling. You see a door on the floor that leads to a
                 }
                 else
                 {
+                    Console.Clear();
                     Console.WriteLine("You arrange the utensils...");
                     Console.WriteLine("The knife comes alive and cuts you!");
                     Game.playerHealth -= 20;
