@@ -17,8 +17,11 @@ namespace NarrativeProject
 
             while (!game.IsGameOver())
             {
-                Console.WriteLine("--Inventory (press i)--");
+                
+                Console.WriteLine("-------------------");
+                Console.WriteLine("Inventory (press i)");
                 Console.WriteLine($"Player health: {Game.playerHealth}");
+                Console.WriteLine("-------------------");
                 Console.WriteLine("\n");
 
                 Console.WriteLine(game.CurrentRoomDescription);

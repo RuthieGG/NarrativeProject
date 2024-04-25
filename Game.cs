@@ -65,13 +65,18 @@ namespace NarrativeProject
         }
         internal void DisplayInventory()
         {
+            Console.Clear();
+
             if (inventory.Count == 0)
             {
                 Console.WriteLine("You have nothing in your inventory...");
             }
             else
             {
+                Console.WriteLine("----------");
                 Console.WriteLine("Inventory");
+                Console.WriteLine("----------");
+
                 foreach (var item in inventory)
                 {
                     Console.WriteLine(item);

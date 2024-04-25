@@ -72,7 +72,7 @@ with cobwebs on the falling ceiling. You see a door on the floor that leads to a
 
                 if (CorrectedUtensils(input))
                 {
-                    Console.WriteLine("You hear a click from the cupboard!");
+                    Console.WriteLine("\nYou hear a click from the cupboard!");
                     Console.WriteLine("It is now unlocked. You find a mysterious key.");
                 isKeyCollected = true;
                 Game.AddInventory("Key 2");
