@@ -10,8 +10,8 @@ namespace NarrativeProject
         internal bool IsGameOver() => isFinished;
         static bool isFinished;
         static string nextRoom = "";
-        static List<string> inventory = new List<string>();
-       public static int playerHealth = 100;
+       internal static List<string> inventory = new List<string>();
+        public static int playerHealth = 100;
 
         internal void Add(Room room)
         {
@@ -92,7 +92,7 @@ namespace NarrativeProject
                 }
             }
         }
-        internal void UseItem(string item)
+        internal static void UseItem(string item)
         {
             if (!inventory.Contains(item))
             {
