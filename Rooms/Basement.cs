@@ -28,21 +28,25 @@ But you notice a padlock...You can walk up the stairs to the [kitchen].
                     }
                     else
                     {
-                        Console.WriteLine("You see that it requires a combination lock...");
+                        Console.Clear();
+                       Jump2: Console.WriteLine("You see that it requires a combination lock...");
                         Console.WriteLine($"It requires a 4 digit combination code: ");
                         string rightCode = Console.ReadLine();
 
                         if(rightCode == Hallway.combinationCode)
                         {
+                            Console.Clear();
                             Console.WriteLine("The lock clicks open...freedom is yours!");
                             isLastRoomUnlocked = true;
                             Game.Transition<LastRoom>();
                         }
                         else
                         {
+                            Console.Clear();
                             Console.WriteLine("You get electrocuted! The door to escape remains locked...");
                             Game.playerHealth -= 20;
                             Console.WriteLine($"Your health is now {Game.playerHealth}");
+                            goto Jump2;
                         }
                     }
                     break;

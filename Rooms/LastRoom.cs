@@ -23,9 +23,9 @@ Or you can go back to the [basement].";
                     if (Game.inventory.Contains("Teddy Bear"))
                     {
                         Console.WriteLine("You inspect the pedestal. You place" +
-                            "\n the teddy bear inside the slot..." +
-                            "\n The random door appears. This time, you escape" +
-                            "\n for real!");
+                            "\nthe teddy bear inside the slot..." +
+                            "\nThe random door appears. This time, you escape" +
+                            "\nfor real!");
                         Game.inventory.Remove("Teddy Bear");
                         Game.Finish();   
                     }

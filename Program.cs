@@ -39,6 +39,8 @@ namespace NarrativeProject
                 }
      
             }
+            Console.WriteLine("\n");
+            Console.WriteLine("\n");
 
             Console.WriteLine("END");
             Console.ReadLine();
